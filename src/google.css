@@ -1,0 +1,119 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+}
+.logo-img{
+   margin-bottom: 20px;          /* Adds space below the logo */
+   display: block;               /* Makes the image behave like a block element */
+   width: 300px;                 /* Sets logo width */
+   margin-left: auto;            /* Centers image horizontally */
+   margin-right: auto;           /* Centers image horizontally */
+}
+
+.search-box input{
+    border: 1px solid #dfe1e5;   /* Light grey border around input */
+    border-radius: 24px;         /* Makes the input edges rounded */
+    display: block;              /* Makes input take full line */
+    width: 400px;                /* Sets input width */
+    
+     margin: 0 auto;/* Centers input */
+    /*or
+    margin: 10px 20px 10px 20px; */  /* Top, Right, Bottom, Left */
+    padding-top: 10px;           /* Space inside top of input */
+    padding-bottom: 10px;        /* Space inside bottom */
+    padding-left: 30px;          /* Space inside left (push text inward) */
+    padding-right: 30px;         /* Space inside right */
+    line-height: 24px;           /* Sets height of text line inside input */
+}
+
+.main{
+    margin-top: 100px;           /* Pushes content down from top */
+    text-align: center;          /* Centers text inside */
+}
+
+.items{
+    border:1px solid #222222;    /* Adds dark border */
+    padding: 10px;               /* Adds inner spacing */
+    margin-top: 10px;            /* Space above */
+    margin-bottom: 50px;         /* Large space below */
+    margin-left: 10px;           /* Space on left */
+    margin-right: 10px;          /* Space on right */
+}
+
+.navs{
+    display: flex;               /* Makes items line up using Flexbox */
+    justify-content: center;     /* Centers items horizontally */
+}
+
+.button-center{
+    display: flex;               /* Flexbox container */
+    justify-content: center;     /* Centers buttons */
+}
+
+.btn{
+    margin-top: 30px;            /* Space above button */
+    background: #dfe1e5;         /* Light grey background */
+    border: 1px solid #cfd9de;   /* Light border */
+    border-radius: 4px;          /* Slightly rounded corners */
+    padding-top: 8px;            /* Inside spacing top */
+    padding-bottom: 8px;         /* Inside spacing bottom */
+    padding-left: 16px;          /* Inside spacing left */
+    padding-right: 16px;         /* Inside spacing right */
+    font-size: 14px;             /* Text size */
+    font-weight: bold;           /* Make text bold */
+    color: #1b1b1b;              /* Dark text color */
+    margin-bottom: 50px;         /* Space below */
+    margin-right: 4px;           /* Small space between buttons */
+    margin-left: 4px;            /* Small space between buttons */
+}
+
+.card{
+    justify-content: space-around; /* Spreads items apart evenly */
+    color: #2b2839;               /* Dark text color */
+    background: #ddebf8;      /* Light yellow background */
+    display: block;               /* Block element */
+   
+    margin: 0 auto; /* Centers card */
+    width: 500px;                 /* Sets card width */
+    padding: 20px;                /* Space inside card */
+    margin-bottom: 20px;          /* Space below card */
+    border-bottom: 5px solid #d8cefe;      /* Dotted blue border */
+    border-radius: 15px;           /* Curved corners */
+}
+
+.card-text{
+    text-align: center;
+    
+}
+
+.card-img{
+    width: 150px;  /* Image width */
+    border: 1px solid red ;
+    border-radius: 100%; 
+    height: 150px;    /* Rounded image corners */
+}
+
+.card-flex{
+    display: flex;                /* Layout children side-by-side */
+    justify-content: space-around; /* Spread items evenly */
+}
+
+
+
+.pricing{
+    display: flex;                /* Arrange elements in a row */
+}
+
+#follow{
+    background: white;            /* White background */
+    color: #0f1419;               /* Dark text */
+    border: 1px solid #cfd9de;    /* Light border */
+    border-radius: 20px;          /* Rounded edges */
+    padding-top: 8px;             /* Top spacing */
+    padding-bottom: 8px;          /* Bottom spacing */
+    padding-left: 16px;           /* Left spacing */
+    padding-right: 16px;          /* Right spacing */
+    font-weight: bold;            /* Bold text */
+    margin-top: 20px;             /* Space above */
+    margin-bottom: 20px;          /* Space below */
+}
