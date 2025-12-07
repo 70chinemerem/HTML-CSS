@@ -56,24 +56,36 @@ body{
     align-items: center;
 }
 .texts{
-    font-size: 20px;
-    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    min-height: 400px;
     
 }
 /* Styles for large screens (e.g., 600px and wider) */
-@media (min-width: 600px) {
+@media (max-width: 768px) {
     .texts {
-        display: flex; /* Activate Flexbox on the container */
         flex-direction: column; /* Arrange items in a row */
-        justify-content: center ; /* Distribute items evenly with space around them */
-        align-items: center; /* Align items vertically in the center */
+       text-align: center;
+       
     }
 }
 .btns{
+    width: 50%;
+    margin: 0 auto;
+    border: none;
+    margin-top: 30px;
     background: linear-gradient(to right,indigo,#FF7F50);
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 15px 20px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.btns:hover {
+    color: black !important;
+    background: linear-gradient(lightblue,gray);
+    padding: 18px 25px;
+    
 }
 .gradient-text {
     /* Apply the gradient as a background image */
