@@ -56,8 +56,41 @@ body{
     align-items: center;
 }
 .texts{
-    margin-top: -30%;
+    font-size: 20px;
+    min-height: 200px;
+    
 }
+/* Styles for large screens (e.g., 600px and wider) */
+@media (min-width: 600px) {
+    .texts {
+        display: flex; /* Activate Flexbox on the container */
+        flex-direction: column; /* Arrange items in a row */
+        justify-content: center ; /* Distribute items evenly with space around them */
+        align-items: center; /* Align items vertically in the center */
+    }
+}
+.btns{
+    background: linear-gradient(to right,indigo,#FF7F50);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+.gradient-text {
+    /* Apply the gradient as a background image */
+    background-image: linear-gradient(to right,  #F0F0F0,lightblue); 
+
+    /* Clip the background to the text area */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Make the text transparent so the background can show through */
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Fallback for older browsers */
+
+    /* Ensure the span behaves correctly with the button context */
+    display: inline-block;
+}
+
 
 /* MAIN FLEX CONTAINER */
 #about{
