@@ -1,216 +1,306 @@
-body{
+/* GLOBAL STYLES */
+body {
     background: #F5F5F5;
     color: #111827;
     font-size: 16px;
+    font-family: Georgia, serif;
     margin: 0;
     padding: 0;
     text-align: center;
 }
+
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+    font-family: Georgia, serif;
+    font-weight: bold;
 }
 
 /* HEADER */
-.header{
+.header {
     background: linear-gradient(90deg, #1F2937, #0F172A);
-    color: blue;
+    color: #3B82F6;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 15px;
-    height: 60px;
+    padding: 0px 20px;
+    height: 65px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-#navs{
-    color: #3B82F6;
+#navs {
     display: flex;
-    gap: 20px;
+    gap: 18px;
     padding: 0;
 }
-#navs a{
-   padding: 10px 15px;
-   text-decoration: none;
-   position: relative;
+
+#navs li {
+    list-style: none;
 }
 
-
-
-#navs :hover{
-   background: #66F2FF;
-   color: white;
-   transform: translateY(-5px);
-   border-radius: 5px;
-   transition:  background-color 0.0s ease; 
+#navs a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #3B82F6;
+    position: relative;
+    transition: 0.3s ease;
+    font-size: 17px;
+    transform: translateY(-2px);
 }
-#navs a::after{
+
+/* Hover animation */
+#navs :hover {
+    background: #66F2FF;
+    color: white;
+    transform: translateY(-2px);
+    transition: 0.3s ease;
+    border-radius: 6px;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
+}
+
+/* Underline animation */
+#navs a::after {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: -3px;
+    bottom: -4px;
     width: 0;
     height: 2px;
-    background:  #FF7F50;
-     transform: translateX(-50%);
-     transition: width 0.3s ease-in-out;
+    background: #FF7F50;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
 }
-#navs a:hover::after{
+
+#navs a:hover::after {
     width: 60%;
 }
 
-
-#navs li{
-    list-style: none;
-}
-#navs a{
-    color: #3B82F6;
-    text-decoration: none;
-}
 /* HERO */
-.hero{
+.hero {
     min-height: 100vh;
-    background: linear-gradient(135deg,  #00eaff, #7a00ff);
+    background: linear-gradient(135deg, #00eaff, #7a00ff);
     color: #111827;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.texts{
+
+.texts {
     margin-top: 15%;
     display: flex;
     flex-direction: column;
     font-size: 22px;
     min-height: 400px;
-     gap: 25px; /* ← control spacing here */
+    gap: 25px;
 }
+
 .texts > * {
-    margin: 0;  /* remove browser default margins */
+    margin: 0;
 }
-/* Styles for large screens (e.g., 600px and wider) */
+
 @media (max-width: 768px) {
     .texts {
-        flex-direction: column; /* Arrange items in a row */
-       text-align: center;
-       
+        text-align: center;
     }
 }
-.btns{
-    width: 50%;
+
+/* BUTTON */
+.btns {
+    width: 55%;
     margin: 0 auto;
     border: none;
     margin-top: 30px;
     background: #ff2770;
-    text-decoration: none;
     padding: 15px 20px;
     border-radius: 10px;
     cursor: pointer;
     transition: 0.3s ease;
-    
 }
+
 .btns:hover {
     background: #ff4d88;
-    box-shadow: 0 0 12px rgba(255, 39, 112, 0.7);
-     transform: translateY(-2px);
+    box-shadow: 0 0 14px rgba(255, 39, 112, 0.7);
+    transform: translateY(-3px);
 }
-.gradient-text {
-    /* Apply the gradient as a background image */
-    background-image: linear-gradient(to right,  #F0F0F0,lightblue); 
 
-    /* Clip the background to the text area */
+.gradient-text {
+    background-image: linear-gradient(to right, #F0F0F0, lightblue);
     -webkit-background-clip: text;
     background-clip: text;
-
-    /* Make the text transparent so the background can show through */
     -webkit-text-fill-color: transparent;
-    color: transparent; /* Fallback for older browsers */
-
-    /* Ensure the span behaves correctly with the button context */
-    display: inline-block;
 }
 
-
-/* MAIN FLEX CONTAINER */
-#about{
+/* ABOUT SECTION */
+#about {
     margin: 0;
-    padding: 20px;
-    background:  linear-gradient(180deg, #F5F5F5, #E5EBF5);
+    padding: 40px 20px;
+    background: linear-gradient(180deg, #F5F5F5, #E5EBF5);
 }
-.about{
-    font-size: 25px;
+
+.about {
+    font-size: 32px;
     font-weight: bold;
+    margin-bottom: 20px;
 }
-.flex{
+
+.flex {
     background: linear-gradient(145deg, #ffffffdd, #e8e8e8cc);
     backdrop-filter: blur(10px);
-
-    box-shadow: 0 0 1px #0F172A;
-    padding: 20px;
+    transition: 0.5s ease;
+    box-shadow: 0 0 2px #0F172A;
+    padding: 30px;
     margin: 0 auto;
     border-radius: 20px;
-    width: 80%;        /* ← responsive */
-    max-width: 1100px;  /* ← NO MIN-WIDTH */
+    width: 85%;
+    max-width: 1100px;
 }
 
-/* IMAGE */
-#imgm{
+.flex:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* PROFILE IMAGE */
+#imgm {
     background-image: url("../src/images/chinemerem.jpg");
     background-size: cover;
     background-position: center;
-    width: 200px;
-    max-width: 300px;        /* FULL width on mobile */
-    height: 200px;
-    border: solid  1px lightblue;
+    width: 220px;
+    height: 220px;
+    border: solid 2px lightblue;
     border-radius: 50%;
-    
-
+    transition: 0.6s ease;
 }
 
-#imgm:hover{
-    transition: background-image 1.3s ease;
+#imgm:hover {
     background-image: url("../src/images/IMG_0067_converted.jpg");
 }
 
 /* TEXT + IMAGE CONTAINER */
-.flex1{
+.flex1 {
     display: flex;
-    flex-direction: column; /* stack on mobile */
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
-    margin-top: 20px;
-    padding: 20px;
-    min-height: 0px;
+    gap: 25px;
 }
 
-/* TEXT CONTENT */
-.in-text{
+/* TEXT */
+.in-text {
     font-size: 18px;
     line-height: 1.6;
+    max-width: 600px;
     text-align: left;
-    max-width: 600px;  /* keeps text readable */
 }
 
-/* LARGE SCREENS */
 @media (min-width: 768px) {
-    .flex1{
-        flex-direction: row; /* side by side */
-        align-items: center;
+    .flex1 {
+        flex-direction: row;
         justify-content: center;
     }
 
-    #imgm{
-        width: 300px;   /* responsive image */
-        max-width: 400px;
+    #imgm {
+        width: 300px;
         height: 300px;
     }
 
-    .in-text{
+    .in-text {
         width: 60%;
     }
 }
-#footer{
+
+/* SKILLS */
+#skills {
+    background: #F5F5F5;
+    padding: 60px 20px;
+}
+
+#skills h2 {
+    margin-bottom: 25px;
+    font-size: 35px;
+    color: #1F2937;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.skills-list span {
+    background: #1F2937;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+.skills-list span:hover {
+    background: #0F172A;
+    transform: translateY(-4px);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+/* PROJECTS */
+#projects {
+    padding: 60px 20px;
+    background: white;
+}
+
+#projects h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #1F2937;
+}
+
+#projects .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: #F3F4F6;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.project-card a {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #1F2937;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    background: #0F172A;
+}
+
+/* FOOTER */
+#footer {
     background: linear-gradient(90deg, #1F2937, #0F172A);
     color: white;
-    font-weight: lighter;
     padding: 20px;
     text-align: center;
 }

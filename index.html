@@ -11,7 +11,7 @@
     <title>HTML LEARNING</title>
 </head>
 <body>
-    <section id="#home">
+    <section id="home">
     <header class="header">
         
         <h1 class="head"> my page</h1>
@@ -24,13 +24,16 @@
                 <a href="#about" >About</a>
             </li>
              <li>
-                <a href="contact">
-                Contact</a>
+                <a href="contact">Contact</a>
+            </li>
+              <li>
+                <a href="#skills">Skills</a>
             </li>
             </ul>
         </nav>
     </header>
     </section>
+     <!-- HEADER / HERO -->
     <main>
         <section>
             <div class="hero">
@@ -39,14 +42,16 @@
                     My Name Is Chinemerem
                 </h1>
                 <p>Full-Stack Developer | Passionate About Coding & Design</p>
+                <a href="#about" id="back">
                 <button class="btns">
-                <a href="#projects" id="back">
-                    <span class="gradient-text">View My Work</span></a>
+                    <span class="gradient-text">View My Work</span>
                 </button>
+                </a>
                 </div>
             </div>
         </section>
     </main>
+    <!-- ABOUT ME -->
     <section id="about">
           <div class="about">
         <h2>
@@ -64,11 +69,45 @@
           </div>
         </div>
         </div>
-        <p>
-            please contact  me <a href=""  target="_blank">linkin</a>
-        </p>
-        
     </section>
+     <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>Node.js</span>
+      </div>
+    </div>
+  </section>
+
+   <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Project 1</h3>
+          <p>Portfolio website built with HTML, CSS, and JS</p>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>Project 2</h3>
+          <p>Todo app using React and local storage</p>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>Project 3</h3>
+          <p>Weather app using API and JavaScript</p>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
     <footer id="footer">
           &copy;2025 My Portfolio. All rights reserved. 
        </footer>
