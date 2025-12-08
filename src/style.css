@@ -6,10 +6,13 @@ body{
     padding: 0;
     text-align: center;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* HEADER */
 .header{
-    background: #0f0f0f;
+    background: linear-gradient(90deg, #1F2937, #0F172A);
     color: blue;
     display: flex;
     justify-content: space-between;
@@ -21,20 +24,37 @@ body{
 #navs{
     color: #3B82F6;
     display: flex;
-    gap: 15px;
+    gap: 20px;
     padding: 0;
+}
+#navs a{
+   padding: 10px 15px;
+   text-decoration: none;
+   position: relative;
 }
 
 
-#navs a:hover{
-    color: #F5F5F5;
-   background: #00eaff;
-   text-decoration: underline solid rgba(0,234,255,0.5);
-   text-underline-offset: 4px ;
-   padding: 5px 10px;
+
+#navs :hover{
+   background: #66F2FF;
+   color: white;
+   transform: translateY(-5px);
    border-radius: 5px;
-   text-decoration-thickness: 2px; 
-   transition: background-color 0.80s ease; 
+   transition:  background-color 0.0s ease; 
+}
+#navs a::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background:  #FF7F50;
+     transform: translateX(-50%);
+     transition: width 0.3s ease-in-out;
+}
+#navs a:hover::after{
+    width: 60%;
 }
 
 
@@ -56,11 +76,15 @@ body{
     align-items: center;
 }
 .texts{
+    margin-top: 15%;
     display: flex;
     flex-direction: column;
     font-size: 22px;
     min-height: 400px;
-    
+     gap: 25px; /* ← control spacing here */
+}
+.texts > * {
+    margin: 0;  /* remove browser default margins */
 }
 /* Styles for large screens (e.g., 600px and wider) */
 @media (max-width: 768px) {
@@ -75,17 +99,18 @@ body{
     margin: 0 auto;
     border: none;
     margin-top: 30px;
-    background: linear-gradient(to right,indigo,#FF7F50);
+    background: #ff2770;
     text-decoration: none;
     padding: 15px 20px;
     border-radius: 10px;
     cursor: pointer;
+    transition: 0.3s ease;
+    
 }
 .btns:hover {
-    color: black !important;
-    background: linear-gradient(lightblue,gray);
-    padding: 18px 25px;
-    
+    background: #ff4d88;
+    box-shadow: 0 0 12px rgba(255, 39, 112, 0.7);
+     transform: translateY(-2px);
 }
 .gradient-text {
     /* Apply the gradient as a background image */
