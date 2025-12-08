@@ -7,6 +7,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    padding-top: 65px;
 }
 
 html {
@@ -28,7 +29,114 @@ h1, h2, h3, h4 {
     padding: 0px 20px;
     height: 65px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    z-index: 1002; /* higher than menu/blur */
 }
+/* Make header flex work properly */
+
+/* LOGO ANIMATION */
+.logo {
+    display: inline-block;
+    animation: logoFade 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes logoFade {
+    0% { opacity: 0; transform: translateY(10px) scale(0.92); }
+    60% { opacity: 1; transform: translateY(-3px) scale(1.02); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* HIDE CHECKBOX */
+#menu-toggle {
+    display: none;
+}
+
+/* HAMBURGER ICON */
+.hamburger {
+    
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #3B82F6; /* match your link color */
+    transition: 0.3s ease;
+}
+/* MOBILE NAVIGATION FOR SMALL SCREENS */
+@media (max-width: 768px) {
+    /* Hamburger toggle */
+    .hamburger {
+        display: block; /* show hamburger on mobile */
+        font-size: 32px;
+        cursor: pointer;
+        order: 2;
+        color: #3B82F6;
+        z-index: 1003; /* above menu */
+    }
+
+    /* Mobile menu */
+   @media (max-width: 768px) {
+    #navs {
+        position: fixed;
+        top: 65px; /* below header */
+        right: 0;
+        width: 250px; /* menu width */
+        height: calc(100vh - 65px);
+        background: linear-gradient(90deg, #1F2937, #0F172A);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 1002;
+
+        /* slide out of view initially */
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+
+    /* Show menu when toggled */
+    #menu-toggle:checked + .hamburger + nav #navs {
+        transform: translateX(0);
+    }
+}
+
+
+   
+    /* Close button inside menu */
+    #navs .close-menu {
+        font-size: 32px;
+        color: #fff;
+        cursor: pointer;
+        text-align: right;
+        margin-bottom: 20px;
+    }
+
+    /* Blur background */
+    .blur-bg {
+        display: none;
+        position: fixed;
+        top: 65px; /* below header */
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 65px);
+        backdrop-filter: blur(5px);
+        background-color: rgba(0,0,0,0.2);
+        z-index: 1001;
+        transition: 0.3s ease;
+    }
+
+    /* Show blur when menu open */
+    #menu-toggle:checked ~ .blur-bg {
+        display: block;
+    }
+}
+
+
+
 
 #navs {
     display: flex;
@@ -40,7 +148,8 @@ h1, h2, h3, h4 {
     list-style: none;
 }
 
-#navs a {
+#navs a  {
+   
     padding: 10px 15px;
     text-decoration: none;
     color: #3B82F6;
@@ -51,7 +160,7 @@ h1, h2, h3, h4 {
 }
 
 /* Hover animation */
-#navs :hover {
+#navs a:hover {
     background: #66F2FF;
     color: white;
     transform: translateY(-2px);
@@ -309,6 +418,7 @@ h1, h2, h3, h4 {
   display: flex;
   flex-wrap: wrap; /* stack on small screens */
   justify-content: center;
+  align-items: flex-start;
   gap: 40px;
   max-width: 1000px;
   margin: 0 auto;
@@ -387,7 +497,7 @@ h1, h2, h3, h4 {
   }
     #my-form {
     padding: 20px;
-
+    }
   .contact-form {
     max-width: 300px;   /* smaller width for phones */
     width: 90%;         /* optional: keep it proportional */

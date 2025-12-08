@@ -11,30 +11,51 @@
     <title>HTML LEARNING</title>
 </head>
 <body>
+     <div class="blur-bg"></div>
     <section id="home">
-    <header class="header">
-        
-        <h1 class="head"> my page</h1>
-        <nav>
-            <ul  id="navs">
-            <li>
-                <a href="#home" >Home</a>
-            </li>
-             <li>
-                <a href="#about" >About</a>
-            </li>
-             <li>
-                <a href="#contact">Contact</a>
-            </li>
-              <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            </ul>
-        </nav>
-    </header>
+  
+
+   <header class="header">
+  <!-- Logo / Page Name -->
+  <h1 class="head logo">My Page</h1>
+
+  <!-- Mobile Menu Toggle -->
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+  <!-- Navigation -->
+  <nav>
+    <ul id="navs" class="nav-links">
+      <li class="close-menu">&times;</li> <!-- Mobile menu close button -->
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+</section>
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const blurBg = document.querySelector(".blur-bg");
+const closeMenu = document.querySelector(".close-menu");
+
+// Close menu by clicking blur background
+blurBg.addEventListener("click", () => {
+    menuToggle.checked = false;
+});
+
+// Close menu by clicking the × button
+closeMenu.addEventListener("click", () => {
+    menuToggle.checked = false;
+});
+</script>
+
+
+
     </section>
      <!-- HEADER / HERO -->
     <main>
@@ -50,9 +71,14 @@
                     <span class="gradient-text">View My Work</span>
                 </button>
                 </a>
+  
                 </div>
             </div>
         </section>
+
+
+
+     
     </main>
     <!-- ABOUT ME -->
     <section id="about">
@@ -153,3 +179,6 @@
        </footer>
 </body>
 </html>
+
+
+    
