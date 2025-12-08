@@ -297,6 +297,109 @@ h1, h2, h3, h4 {
     background: #0F172A;
 }
 
+
+
+/* CONTACT SECTION */
+#contact {
+  padding: 60px 20px;
+  background: #f7f7f7;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* stack on small screens */
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+/* .contact links */
+
+.contact-links a{
+    text-decoration: none;
+}
+.contact-links a:hover{
+    color: lightblue;
+}
+/* Contact Info */
+.contact-info {
+  flex: 1 1 300px; /* flexible, min width 300px */
+  max-width: 400px;
+  text-align: left;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+#my-form {
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  text-align: start;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.head{
+    font-size: 30px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#btn2 {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#btn2:hover {
+  background: #0056b3;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column; /* stack vertically */
+    align-items: center;
+  }
+
+  .contact-form {
+    max-width: 350px;   /* smaller width for phones */
+    width: 90%;         /* optional: keep it proportional */
+  }
+
+  .contact-info {
+    max-width: 350px;
+    width: 90%;
+    text-align: center; /* optional: center text on small screens */
+  }
+}
+
+
+
 /* FOOTER */
 #footer {
     background: linear-gradient(90deg, #1F2937, #0F172A);

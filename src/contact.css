@@ -17,7 +17,7 @@ a{
 
 .countainer{
     display: flex; 
-    justify-content: center; /* Centers the form horizontally */
+    justify-content: center;
     align-items: center; /* Centers the form vertically (if height allows) */
     min-height: 80vh; /* Example: gives vertical balance on the page */
     padding: 20px;
